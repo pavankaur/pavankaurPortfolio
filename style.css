@@ -1,0 +1,683 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+    color:white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #EE5E4F;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+
+.feedback-input:focus { border:2px solid #EE5E4F; }
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background:#EE5E4F;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+[type="submit"]:hover { background: #F8D759; }
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+ul.explain{
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 3px;
+}
+/*placing containters next to each other Skills + Cert*/
+.flex-container {
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.flex-child {
+    flex: 1;
+   /* border: 2px solid yellow;*/
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+/*This is the skills box*/
+ul.a {
+    list-style-type: square;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 3px;
+    display: inline-block;
+    text-align:left;
+}
+/*This is the certifications box*/
+ul.b {
+    list-style-type: square;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 3px;
+    display: inline-block;
+    text-align:left;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 770%;
+    background-color: #170D2F;
+    display: flex;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    cursor: auto;
+    background: url(homebackground8.png);
+    background-position: center;
+    top: 0;
+    overflow: hidden;
+}
+p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 3px;
+}
+/* --------------------------------------------------------------------------- */
+
+/* loading page */
+.loader-wrapper {
+    width: 100%;
+    height: 770%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #170D2F;
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    position: absolute;
+    top: 6%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+/* introductory text */
+
+#logo {
+    height: 100px;
+    width: 100%;
+    cursor: auto;
+    position: absolute;
+    top: 29%;
+    margin-top: -100px; /*changed this val*/
+    text-align: center;
+    opacity: 0.9;
+}
+.logo {
+    width: 175px; /*makes the pic bigger width n height 100px */
+    height: 175px;
+}
+
+.name {
+    position: absolute;
+    top: 42%; /*29*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+    letter-spacing: 4px;
+}
+
+h2 {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.labels {
+    position: absolute;
+    top: 53%; /*40*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.greeting {
+    position: absolute;
+    top: 59%; /*46*/
+    left: 50%;
+    transform: translate(-47%, -50%);
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 20px;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* nav bar */
+nav ul {
+    list-style: none;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    opacity: .5;
+}
+
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+/* explore button on home screen */
+.button {
+    position: absolute;
+    top: 64%; /*51*/
+    left: 50%;
+    background-image: linear-gradient(to right, #F8D759, #EE5E4F);
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 17px;
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px;
+    line-height: 1.0;
+    transform: translateX(-50%);
+}
+
+.button:hover {
+    background-image: linear-gradient(to right, #EE5E4F, #F8D759);
+}
+
+/* bouncing arrow on home screen */
+.bounce {
+    position: absolute;
+    top: 72%; /*59*/
+    left: 47.5%;
+    width: 70px;
+    height: 75px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-animation: sdb05 1.75s infinite;
+    animation: sdb05 1.75s infinite;
+}
+
+@-webkit-keyframes sdb05 {
+    0% {
+        -webkit-transform: rotate(0deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(0deg) translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+@keyframes sdb05 {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(0deg) translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* icon bar */
+#linkedin{
+    position: absolute;
+    bottom: 31%;
+    left: 24px;
+    height: 30px;
+    width: 34px;
+    position: fixed;
+}
+#gmail {
+    position: absolute;
+    bottom: 24%;
+    left: 24px;
+    height: 30px;
+    width: 34px;
+    position: fixed;
+}
+
+
+#instagram {
+    position: absolute;
+    bottom: 17%;
+    left: 24px;
+    height: 32px;
+    width: 33px;
+    position: fixed;
+}
+
+.line {
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    background: white;
+    opacity: 0.3;
+    border: none;
+    bottom: 0;
+    left: 40px;
+    position: fixed;"
+}
+
+#linkedin:hover {
+    opacity: 0.5;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: translateY(-4px);
+}
+
+#gmail:hover {
+    opacity: 0.5;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: translateY(-4px);
+}
+
+#instagram:hover {
+    opacity: 0.5;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: translateY(-4px);
+}
+
+
+/* --------------------------------------------------------------------------- */
+h1{                                            /*****title for each subpage******/
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 2px;
+}
+h3{                                            /*****title for each subpage******/
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+}
+h4{                                            /*****title for each subpage******/
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: 50;
+    font-size: 15px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* title design for each subpage */
+.header {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* --------------------------------------------------------------------------- */
+
+#page1 {
+    position: absolute;
+    top: 110%;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0);;
+}
+
+/* --------------------------------------------------------------------------- */
+
+#page2 {
+    position: absolute;
+    top: 250%;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0);;
+
+}
+
+/* --------------------------------------------------------------------------- */
+
+#page3 {
+    position: absolute;
+    top: 715%;       /*****************this changed the position of page 3**********/
+    height: 100vh;   /******************this changed how big page was so footer didnt't mess with bottom of form*****/
+    /*
+    top: 745%;
+    height: 75vh;*/
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* copyright footer */
+.container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #12062C;
+    opacity: 0.6;
+}
+
+.copyright {
+    position: absolute;
+    top: 21px;
+    left: 5.5%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #D1D3D4;
+    letter-spacing: -0.3px;
+}
+
+.to-top {
+    position: absolute;
+    top: 20px;
+    right: 6%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #D1D3D4;
+    letter-spacing: -0.3px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.to-top:hover {
+    opacity: 0.5;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* custom scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------- */
+
+@media (max-width: 1439px and min-width: 1425px) {
+    .bounce {
+        left: 46.5%;
+    }
+}
+
+@media (max-width: 1425px and min-width: 1395px) {
+    .bounce {
+        left: 44.5%;
+    }
+}
+
+@media (max-width: 1395px and min-width: 1375px) {
+    .bounce {
+        left: 43.5%;
+    }
+}
+
+@media (max-width: 1375px and min-width: 1355px) {
+    .bounce {
+        left: 42.5%;
+    }
+}
+
+@media (max-width: 1355px and min-width: 1300px) {
+    .bounce {
+        left: 41%;
+    }
+}
+
+@media (max-width: 1300px and min-width: 1260px) {
+    .bounce {
+        left: 40%;
+    }
+}
+
+@media (max-width: 1260px and min-width: 1230px) {
+    .bounce {
+        left: 39%;
+    }
+}
+
+@media (max-width: 1230px and min-width: 1200px) {
+    .bounce {
+        left: 38%;
+    }
+}
+
+@media (max-width: 1200px and min-width: 1000px) {
+    .bounce {
+        left: 35%;
+    }
+}
+
+@media (max-width: 620px) {
+    .labels {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+}
